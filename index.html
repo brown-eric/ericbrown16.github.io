@@ -2,46 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Your Name | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Brown | CS @ UF</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <h1>Your Name</h1>
-    <p>Computer Science Student @ University of Florida</p>
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <div class="container">
+    <header>
+      <img src="pictures/Headshot.jpg" alt="Eric Brown" class="profile-img" />
+      <h1>Eric Brown</h1>
+      <p>Computer Science @ UF • National Team Swimmer</p>
+      <section id="small-contact">
+        <p><a href="mailto:ericbrownswim@gmail.com">Email</a> | <a href="https://linkedin.com/in/eric-brown16" target="_blank">LinkedIn</a> | <a href="documents/Eric_Brown_Resume.pdf" download>Resume</a></p>
+      </section>
+      <nav>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#athletics" class="nav-link">Athletics</a>
+      </nav>
+    </header>
 
-  <main>
-    <section id="projects">
-      <h2>Projects</h2>
-      <article>
-        <h3>P2P File Sharing System</h3>
-        <p>Brief description of what it does and what you contributed.</p>
-        <a href="https://github.com/yourusername/your-p2p-repo" target="_blank">View on GitHub</a>
-      </article>
+    <main>
+      <section id="projects" class="projects-grid">
+        <h2>Featured Projects</h2>
+        
+        <div class="project-card" onclick="toggleDetails(this)">
+          <div class="project-header">
+            <h3>Drone-Based 3D Mapping</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="project-details">
+            <p>Industry-sponsored autonomous drone for 3D terrain mapping with JWM Engineering.</p>
+            <ul>
+              <li>Python/C++ software with unit testing, debugging, Git.</li>
+              <li>Agile team of 7 engineers, year-long design project.</li>
+            </ul>
+            <a href="https://github.com/brown-eric/drone-mapping" target="_blank">GitHub →</a>
+          </div>
+        </div>
 
-      <article>
-        <h3>Autonomous Drone Simulation</h3>
-        <p>Short summary of the simulation and tech used (PX4, Gazebo, etc.).</p>
-        <a href="https://github.com/yourusername/your-drone-repo" target="_blank">View on GitHub</a>
-      </article>
-    </section>
+        <div class="project-card" onclick="toggleDetails(this)">
+          <div class="project-header">
+            <h3>Recruiting AI Agent</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="project-details">
+            <p>n8n workflows + LLM APIs for automated candidate screening.</p>
+            <ul>
+              <li>Streamlines email management and job search workflows.</li>
+              <li>Personal automation tool using API integrations.</li>
+            </ul>
+            <a href="https://github.com/brown-eric/esep-webhooks" target="_blank">GitHub →</a>
+          </div>
+        </div>
 
-    <section id="about">
-      <h2>About</h2>
-      <p>1–2 sentences about who you are, interests (distributed systems, robotics), and what roles you’re looking for.</p>
-    </section>
+        <div class="project-card" onclick="toggleDetails(this)">
+          <div class="project-header">
+            <h3>P2P File Sharing System</h3>
+            <span class="arrow">▼</span>
+          </div>
+          <div class="project-details">
+            <p>BitTorrent-inspired P2P network in Java for COP4020.</p>
+            <ul>
+              <li>Handshake protocol, choking/unchoking, bitfield tracking.</li>
+              <li>Multi-peer file transfer with reliable messaging.</li>
+            </ul>
+            <a href="https://github.com/brown-eric/p2p-file-sharing" target="_blank">GitHub →</a>
+          </div>
+        </div>
+      </section>
 
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/your-profile" target="_blank">Your LinkedIn</a></p>
-    </section>
-  </main>
+      <section id="about">
+        <h2>About</h2>
+        <p>BS Computer Science (3.89 GPA), UF '26. Building systems that scale. Elite swimmer balancing academics + training.</p>
+      </section>
+
+      <section id="athletics">
+        <h2>Athletics</h2>
+        <p>UF Swim Team Captain • Canadian National Team • 3× World Championships</p>
+      </section>
+
+      <section id="contact">
+        <h2>Contact</h2>
+        <p><a href="mailto:ericbrownswim@gmail.com">ericbrownswim@gmail.com</a></p>
+        <p><a href="https://linkedin.com/in/eric-brown16" target="_blank">LinkedIn</a> | <a href="documents/Eric_Brown_Resume.pdf" download>Resume</a></p>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    function toggleDetails(card) {
+      const details = card.querySelector('.project-details');
+      const arrow = card.querySelector('.arrow');
+      details.style.display = details.style.display === 'block' ? 'none' : 'block';
+      arrow.textContent = details.style.display === 'block' ? '▲' : '▼';
+    }
+  </script>
 </body>
 </html>
