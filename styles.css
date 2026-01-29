@@ -11,6 +11,12 @@ body {
   line-height: 1.6;
 }
 
+.small-text {
+  font-size: 0.8rem;
+  opacity: 0.8;
+  line-height: 1.2;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
@@ -195,4 +201,96 @@ h2 {
   nav {
     gap: 1rem;
   }
+}
+.project-summary {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 1rem 0 1.5rem;
+  color: #f1f5f9;
+}
+
+.project-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.project-timeline {
+  background: rgba(59, 130, 246, 0.1);
+  padding: 1rem;
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #3b82f6;
+}
+
+.timeline-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.timeline-date {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.timeline-role {
+  color: #94a3b8;
+}
+
+.impact-list {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.impact-list li {
+  margin-bottom: 0.75rem;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.blog-link {
+  background: linear-gradient(135deg, #10b981, #059669);
+  color: white !important;
+}
+
+.github-link {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+  color: white !important;
+}
+
+@media (max-width: 768px) {
+  .project-links {
+    flex-direction: column;
+  }
+}
+
+/* Recruiting AI image support */
+.project-image {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  border-radius: 12px;
+  margin: 1.5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #334155;
+}
+
+/* Swim team accent color */
+.recruiting-tech .tech-tag {
+  background: linear-gradient(135deg, #10b981, #059669);
 }
