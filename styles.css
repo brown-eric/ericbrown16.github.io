@@ -447,104 +447,63 @@ h2 {
   }
 }
 
-/* Mobile Fixes */
+/* Mobile Full Width Fix */
 @media (max-width: 480px) {
-  /* Bio text wrapping */
-  .about-bio p {
-    font-size: 1rem;
-    padding: 0 0.5rem;
-    hyphens: auto;
-    text-align: left;
+  body {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   
-  /* Header tighter spacing */
-  header {
-    padding: 2rem 1rem 1.5rem;
-  }
-  
-  .profile-img {
-    width: 140px;
-    height: 140px;
-  }
-  
-  header h1 {
-    font-size: 2.25rem;
-  }
-  
-  header p {
-    font-size: 1.1rem;
-    padding: 0 1rem;
-  }
-  
-  /* Nav buttons smaller gap */
-  nav {
-    gap: 0.75rem;
-  }
-  
-  .nav-link {
-    padding: 0.5rem 1rem;
-    font-size: 0.95rem;
-  }
-  
-  /* Main tighter padding */
+  .container,
+  header,
   main {
-    padding: 2rem 0.75rem;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
   
-  /* Project cards more compact */
-  .project-card {
-    padding: 1.5rem;
+  /* Force header & projects same width */
+  header {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
   
-  .project-header h3 {
-    font-size: 1.3rem;
+  main {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
   }
   
-  /* Stats row tighter */
-  .about-stats, .athletics-hero {
+  /* Nav full width on tiny screens */
+  nav {
     gap: 1rem;
     padding: 0 0.5rem;
   }
   
-  .stat-item, .hero-stat {
-    padding: 1rem 0.75rem;
-    min-width: unset;
-  }
-  
-  .stat-number {
-    font-size: 1.75rem;
-  }
-  
-  /* Skills pairs stack better */
-  .skill-pair {
-    padding: 1rem 0.75rem;
-    gap: 0.75rem;
-  }
-  
-  /* Honors grid smaller */
-  .honors-grid {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 0.75rem;
-  }
-  
-  .honor-item {
-    padding: 1rem 0.75rem;
-    font-size: 0.95rem;
-  }
-  
-  .honor-item h4 {
-    font-size: 1rem;
-  }
-}
-
-/* Extra small phones */
-@media (max-width: 360px) {
-  main {
-    padding: 1.5rem 0.5rem;
+  /* Project cards edge-to-edge */
+  .projects-grid {
+    padding: 0 0.25rem;
+    margin: 0 -0.25rem;
   }
   
   .project-card {
-    padding: 1.25rem;
+    margin: 0 0.25rem;
+    border-radius: 16px;
   }
 }
 
+/* iPhone Safari Specific */
+@supports (-webkit-touch-callout: none) {
+  @media (max-width: 414px) {
+    html {
+      font-size: 16px; /* Prevent zoom */
+    }
+    
+    * {
+      max-width: 100vw !important;
+    }
+  }
+}
